@@ -1,0 +1,31 @@
+{
+    "name": "Test",
+    "parameters": {},
+    "services": {
+        "bash": {
+            "command": "-c 'echo 123 && env && sleep 999'",
+            "entrypoint": "bash",
+            "env_variables": {
+                "INHERITANCE_TEST_USE_SERVICE": "service"
+            },
+            "env_variables_inherit": [
+                "INHERITANCE_TEST_STAY_PROJECT",
+                "INHERITANCE_TEST_USE_JOB",
+                "INHERITANCE_TEST_USE_PIPELINE"
+            ],
+            "image": "bash",
+            "name": "bash",
+            "scope": [
+                "noninteractive",
+                "interactive"
+            ]
+        }
+    },
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {},
+    "uuid": "b57c0895-169b-435a-ad32-5cc659b342b2",
+    "version": "1.0.0"
+}
